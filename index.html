@@ -1,1 +1,764 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bohse — Ihr Energiepartner im Emsland · Wärme · Strom · Wasser</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/bohse.css" />
+
+<template id="__bundler_thumbnail" data-bg-color="#fbfaf6">
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Warm paper background -->
+    <rect width="600" height="400" fill="#fbfaf6"/>
+    <!-- Sun / brand mark -->
+    <g transform="translate(300 180)">
+      <circle r="54" fill="#f2c94c"/>
+      <g stroke="#f2c94c" stroke-width="8" stroke-linecap="round">
+        <line x1="0" y1="-78" x2="0" y2="-96"/>
+        <line x1="0" y1="78" x2="0" y2="96"/>
+        <line x1="-78" y1="0" x2="-96" y2="0"/>
+        <line x1="78" y1="0" x2="96" y2="0"/>
+        <line x1="-55" y1="-55" x2="-68" y2="-68"/>
+        <line x1="55" y1="-55" x2="68" y2="-68"/>
+        <line x1="-55" y1="55" x2="-68" y2="68"/>
+        <line x1="55" y1="55" x2="68" y2="68"/>
+      </g>
+    </g>
+    <!-- Wordmark -->
+    <text x="300" y="310" text-anchor="middle"
+          font-family="Georgia, serif" font-size="48" font-weight="400"
+          fill="#2a2a2a" letter-spacing="0.05em">BOHSE</text>
+    <text x="300" y="340" text-anchor="middle"
+          font-family="ui-monospace, monospace" font-size="11"
+          fill="#888" letter-spacing="0.2em">HEIZUNG · SANITÄR · ENERGIE · SEIT 1955</text>
+  </svg>
+</template>
+
+</head>
+
+<body class="typo-instrument density-compact motion-off">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="pill"><span class="dot"></span> Geöffnet · <span class="pill-hours"><span>Mo–Do 07:30–16:45</span><span class="pill-sep">·</span><span>Fr 07:30–13:45</span></span></div>
+    <div class="topbar-contact">
+      <a href="tel:+4959329039896" class="emerg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Notdienst · 05932 · 90 39 896</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="Startseite.html" aria-label="Bohse Startseite">
+      <img src="images/logo-black.png" alt="BOHSE — Heizung Sanitär Regenerative Energien" class="logo-img" />
+    </a>
+    <nav class="nav-links">
+      <a href="Startseite.html" class="active">Start</a>
+      <a href="Leistungen.html">Leistungen</a>
+      <a href="Ueber-uns.html">Über uns</a>
+      <a href="Referenzen.html">Referenzen</a>
+      <a href="Kontakt.html">Kontakt</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+4959324660" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+        05932 · 46 60
+      </a>
+      <a class="btn btn-primary" href="Kontakt.html">
+        Beratung anfragen
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero v-wide" id="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="trust-row">
+        <span class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          Energiepartner seit 1955
+        </span>
+        <span class="trust-stars" aria-label="4,8 von 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+        </span>
+        <span class="trust-text"><b>4,8 / 5</b> · 28 Google-Bewertungen</span>
+      </div>
+
+      <h1 class="hero-h1">Ihr Energie&shy;partner für <em>Wärme, Strom</em> und Wasser &mdash; <span class="hl">aus einer Hand.</span></h1>
+
+      <p class="hero-sub">
+        Wir planen, bauen und betreuen die komplette Gebäude­technik in Ihrem Zuhause &mdash; von der Wärme­pumpe über Photovoltaik bis zum Bad. Persönliche Beratung, faire Preise, drei Generationen Erfahrung im Emsland.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="Kontakt.html" class="btn btn-primary btn-lg">
+          Kostenlose Beratung vereinbaren
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="tel:+49442198540" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+          Direkt anrufen
+        </a>
+      </div>
+
+      <div class="hero-benefits">
+        <div class="hben">
+          <div class="hben-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div class="hben-t">Kostenlose Erstberatung</div>
+            <div class="hben-d">bei Ihnen zu Hause</div>
+          </div>
+        </div>
+        <div class="hben">
+          <div class="hben-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div class="hben-t">Fördermittel-Service</div>
+            <div class="hben-d">bis zu 70 % Förderung</div>
+          </div>
+        </div>
+        <div class="hben">
+          <div class="hben-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div class="hben-t">24 h Notdienst</div>
+            <div class="hben-d">im Störfall für Sie da</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-badge">
+        <b>1955</b>
+        <span class="badge-divider"></span>
+        <div class="badge-meta">
+          <span>Familien&shy;betrieb</span>
+          <span>3. Generation</span>
+        </div>
+      </div>
+      <img src="images/geschaeftsfuehrung.jpg" alt="Jörg Suhlmann und Hans Bohse vor dem Betrieb" />
+      <div class="hero-chip-gf">
+        <div class="n">Jörg Suhlmann &amp; Hans Bohse</div>
+        <div class="r">Geschäftsführung</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust partners bar -->
+  <div class="trustbar">
+    <div class="trustbar-inner">
+      <span class="trustbar-lbl">Premium-Partner</span>
+      <div class="trustbar-row">
+        <img src="images/partners/wolf.png" alt="Wolf" class="plogo" />
+        <img src="images/partners/viessmann.png" alt="Viessmann" class="plogo" />
+        <img src="images/partners/vaillant.png" alt="Vaillant" class="plogo" />
+        <img src="images/partners/kostal.png" alt="Kostal" class="plogo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY / VERTRAUEN -->
+<section class="why section">
+  <div class="why-inner">
+      <div class="sec-head">
+        <div class="seclabel">Warum Bohse</div>
+        <h2 class="sec-title">Weil <em>Vertrauen</em> keine Option ist &mdash; sondern Voraussetzung.</h2>
+        <p class="sec-lede">
+          Eine Wärme­pumpe, eine PV-Anlage, ein Bad &mdash; das sind Investitionen für 15 bis 25 Jahre. Wir wollen, dass Sie in dieser Zeit wissen, wen Sie anrufen können. Und dass wir immer noch da sind, wenn Sie anrufen.
+        </p>
+      </div>
+
+    <div class="why-cards">
+      <div class="wcard fade-up">
+        <div class="n">01</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6l9-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Meisterbetrieb seit 1955</h3>
+        <p>Dreifacher Meisterbetrieb: Heizung, Sanitär, Elektro. Alles aus einer Hand, alles unter einem Dach.</p>
+      </div>
+      <div class="wcard fade-up">
+        <div class="n">02</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>24 h Notdienst</h3>
+        <p>Fällt die Heizung aus, sind wir innerhalb von zwei Stunden bei Ihnen — auch am Wochenende.</p>
+      </div>
+      <div class="wcard fade-up">
+        <div class="n">03</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z"/></svg></div>
+        <h3>Wolf Platinum-Partner</h3>
+        <p>Seit 2023 zertifizierter Wolf-Fachbetrieb für Wärme­pumpen — höchste Stufe im Wolf-Partner­netzwerk.</p>
+      </div>
+      <div class="wcard fade-up">
+        <div class="n">04</div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16v8a4 4 0 01-4 4H8a4 4 0 01-4-4V4z"/><path d="M12 16v4M8 20h8"/></svg></div>
+        <h3>Förderberatung inklusive</h3>
+        <p>Wir beantragen BAFA, KfW und Landesförderung für Sie — und sichern so bis zu 70 % Ihrer Investition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER / HIGH-CONVERSION -->
+<section class="offer-band">
+  <div class="offer-inner">
+    <div>
+      <div class="seclabel" style="color: var(--bh-yellow);">Unser Angebot</div>
+      <h2>Kostenlose Energie&shy;beratung &mdash;<br/><em>bei Ihnen zu Hause.</em></h2>
+      <p class="p">
+        In 60 Minuten klären wir gemeinsam, welches Energie­konzept zu Ihrem Haus, Ihrem Verbrauch und Ihrem Budget passt &mdash; Wärme, Strom, Wasser. Ohne Druck, ohne Verkaufsgespräch.
+      </p>
+      <ul class="offer-points">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Bestandsaufnahme Ihrer aktuellen Heizung
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Wirtschaftlichkeits- und Effizienzberechnung
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Passgenaue Fördermittel-Beratung
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Schriftliches Angebot innerhalb 2 Wochen
+        </li>
+      </ul>
+      <a href="Kontakt.html" class="btn btn-primary btn-lg">
+        Jetzt Termin vereinbaren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <div class="offer-card">
+      <span class="tag">Aktion</span>
+      <h3>Vor-Ort-Beratung</h3>
+      <p style="color: var(--text-muted); font-size: 14px; margin: 0;">Im gesamten Emsland — Haren, Meppen, Lingen, Papenburg, Lathen.</p>
+      <div class="price">
+        <span class="k">0 €</span>
+        <span class="l">unverbindlich & kostenfrei</span>
+      </div>
+      <div class="meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Terminvergabe meist innerhalb einer Woche
+      </div>
+      <div class="meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Antwort auf Anfragen unter 24 h
+      </div>
+      <div class="meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Persönlich durch einen Meister
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN / SERVICES -->
+<section class="section">
+  <div style="max-width: var(--maxw); margin: 0 auto 64px; padding: 0 28px;">
+    <div class="seclabel">Leistungen</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-top: 16px;">
+      <h2 class="sec-title">Wärme, Strom, Wasser &mdash; <em>alles aus einer Hand.</em></h2>
+      <p class="sec-lede">
+        Von der modernen Wärme­pumpe über Photovoltaik mit Speicher bis zum barriere­freien Bad. Ein Meisterbetrieb, drei Gewerke, Hand in Hand.
+      </p>
+    </div>
+  </div>
+
+  <div class="svc-grid">
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="4" width="24" height="24" rx="2"/><circle cx="16" cy="16" r="6"/><path d="M16 10v12M10 16h12"/></svg></div>
+      <h3>Wärmepumpen</h3>
+      <p>Luft-, Sole- oder Wasser/Wasser-Wärmepumpen. Effizient, leise und BAFA-gefördert — auch im Bestand.</p>
+      <a href="Leistungen.html#waermepumpe" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="8" width="24" height="14" rx="1"/><path d="M7 12v6M12 12v6M17 12v6M22 12v6M27 12v6"/><path d="M16 22v4M12 26h8"/></svg></div>
+      <h3>Photovoltaik & Speicher</h3>
+      <p>Sonnenstrom vom eigenen Dach — inklusive Batterie­speicher, Wallbox und App für den Überblick.</p>
+      <a href="Leistungen.html#pv" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 28V14l10-8 10 8v14"/><path d="M12 28v-8h8v8"/><path d="M14 22h4"/></svg></div>
+      <h3>Sanitär & Bad</h3>
+      <p>Von der Tropf­reparatur bis zum barriere­freien Traumbad — Planung, Fliesen, Installation aus einer Hand.</p>
+      <a href="Leistungen.html#sanitaer" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M16 3v6M16 23v6M3 16h6M23 16h6M7 7l4 4M21 21l4 4M7 25l4-4M21 11l4-4"/><circle cx="16" cy="16" r="5"/></svg></div>
+      <h3>Solarthermie</h3>
+      <p>Warmes Wasser und Heizungs­unterstützung durch die Kraft der Sonne — wartungsarm, langlebig.</p>
+      <a href="Leistungen.html#solar" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="8" y="4" width="16" height="24" rx="1"/><circle cx="16" cy="12" r="3"/><path d="M11 20l2-2 3 3 2-2 3 3"/></svg></div>
+      <h3>Pelletheizung</h3>
+      <p>CO₂-neutral, regional beschafft, förderfähig — ideal für Altbauten und höhere Wärme­bedarfe.</p>
+      <a href="Leistungen.html#pellet" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+
+    <article class="svc-card fade-up">
+      <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="11"/><path d="M16 7v9l6 3"/></svg></div>
+      <h3>Wartung & Service</h3>
+      <p>Jährlicher Check, Notdienst rund um die Uhr, Ferndiagnose. Damit Ihre Anlage auch in 15 Jahren läuft.</p>
+      <a href="Leistungen.html#wartung" class="lnk">Mehr erfahren
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </article>
+  </div>
+
+  <div class="svc-more">
+    <a href="Leistungen.html" class="btn btn-primary btn-lg">
+      Alle Leistungen ansehen
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process section">
+  <div class="process-inner">
+    <div class="process-head">
+      <div>
+        <div class="seclabel">In 4 Schritten</div>
+        <h2 class="sec-title" style="margin-top: 16px;">So arbeiten wir mit Ihnen <em>zusammen.</em></h2>
+      </div>
+      <p class="sec-lede">
+        Klare Abläufe, feste Ansprech­partner, transparente Preise &mdash; vom ersten Gespräch bis zur jährlichen Wartung.
+      </p>
+    </div>
+
+    <div class="process-steps">
+      <div class="pstep">
+        <div class="n">1</div>
+        <h4>Gespräch & Aufnahme</h4>
+        <p>Wir kommen zu Ihnen, nehmen die Situation auf und hören zu, was Sie sich wünschen.</p>
+        <span class="time">~ 60 Min.</span>
+      </div>
+      <div class="pstep">
+        <div class="n">2</div>
+        <h4>Planung & Angebot</h4>
+        <p>Schriftliches, detailliertes Angebot inkl. Förder­rechnung — innerhalb von 2 Wochen.</p>
+        <span class="time">~ 2 Wochen</span>
+      </div>
+      <div class="pstep">
+        <div class="n">3</div>
+        <h4>Fachgerechte Montage</h4>
+        <p>Unser eigenes Team baut Ihre Anlage ein — sauber, pünktlich, dokumentiert.</p>
+        <span class="time">3–5 Tage</span>
+      </div>
+      <div class="pstep">
+        <div class="n">4</div>
+        <h4>Service & Wartung</h4>
+        <p>Einweisung, jährliche Wartung, 24 h Notdienst. Wir bleiben Ihr Ansprechpartner.</p>
+        <span class="time">1× jährlich</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GESCHÄFTSFÜHRUNG / FOUNDER STORY -->
+<section class="section">
+  <div class="gf-inner">
+    <div class="gf-img fade-up">
+      <img src="images/geschaeftsfuehrung.jpg" alt="Jörg Suhlmann und Hans Bohse, Geschäftsführung" />
+      <div class="chip">
+        <div class="r">3. &amp; 2. Generation</div>
+      </div>
+    </div>
+    <div>
+      <div class="seclabel">Familiensache</div>
+      <h2 class="sec-title" style="margin-top: 16px;">Drei Generationen. <em>Ein Handwerk.</em></h2>
+      <div class="gf-quote">
+        „Wir bauen keine Anlage ein, die wir nicht auch im eigenen Haus hätten. Und wir sind für unsere Kunden da — nicht nur am Tag der Installation."
+      </div>
+      <p style="color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 50ch;">
+        1955 haben Theodor und Wilma Bohse den Betrieb in Haren-Emmeln gegründet. Sein Sohn Hans hat ihn in die zweite Generation geführt — heute führt Neffe Jörg Suhlmann das Unternehmen in dritter Generation weiter. Gleicher Anspruch: ehrliche Beratung, saubere Arbeit, verbindlicher Service.
+      </p>
+      <div class="gf-cred">
+        <div>
+          <div class="k">70</div>
+          <div class="l">Jahre Erfahrung</div>
+        </div>
+        <div>
+          <div class="k">3.</div>
+          <div class="l">Generation</div>
+        </div>
+        <div>
+          <div class="k">3×</div>
+          <div class="l">Meisterbetrieb</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-tight" style="background: var(--surface-alt);">
+  <div class="testi-wrap">
+    <div class="testi-head">
+      <div>
+        <div class="seclabel">Kundenstimmen</div>
+        <h2 class="sec-title" style="margin-top: 16px;">Was unsere <em>Kunden</em> sagen.</h2>
+      </div>
+      <div class="testi-score">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+        </div>
+        <div class="big">4,8 <span style="font-size: 20px; color: var(--text-muted);">/ 5</span></div>
+        <div class="sub">Auf Basis 28 Google-Bewertungen</div>
+      </div>
+    </div>
+
+    <div class="testi-grid">
+      <article class="testi fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+        </div>
+        <blockquote>„Von der Beratung bis zur Inbetrieb­nahme alles absolut professionell. Die Wärme­pumpe läuft seit zwei Wintern — wir merken sie nicht mal."</blockquote>
+        <div class="author">
+          <div class="avatar">MR</div>
+          <div>
+            <div class="name">Michael R.</div>
+            <div class="meta">Einfamilienhaus · 2024</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+        </div>
+        <blockquote>„Die Förder­anträge hätten wir allein nie geschafft. Herr Bohse hat alles vorbereitet — wir haben nur unter­schrieben. Top!"</blockquote>
+        <div class="author">
+          <div class="avatar">AK</div>
+          <div>
+            <div class="name">Anja K.</div>
+            <div class="meta">PV-Anlage · 2025</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg>
+        </div>
+        <blockquote>„Heiligabend, 22 Uhr, Brenner aus. Nach 90 Minuten stand ein Monteur vor der Tür. Solche Betriebe gibt es heute kaum noch."</blockquote>
+        <div class="author">
+          <div class="avatar">HS</div>
+          <div>
+            <div class="name">Heinrich S.</div>
+            <div class="meta">Notdienst · 2024</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM BAND -->
+<section class="team">
+  <img src="images/team.jpg" alt="" class="team-bg" aria-hidden="true" />
+  <div class="team-overlay" aria-hidden="true"></div>
+  <div class="team-inner">
+    <div class="team-grid">
+      <div>
+        <div class="seclabel" style="color: var(--bh-yellow);">Unser Team</div>
+        <h2 class="sec-title" style="color: white; margin-top: 16px;">Ein Team. <em>Ein Auftrag.</em><br/>Ihr Zuhause.</h2>
+      </div>
+      <p>
+        Heizungsbauer, Anlagenmechaniker, Dachdecker, Elektriker — bei uns arbeiten Fachleute mit Haltung. Wer Ihre Anlage plant, baut sie auch ein. Und kommt zur Wartung wieder.
+      </p>
+    </div>
+
+    <div class="team-stats">
+      <div class="tstat">
+        <div class="k">23<sup>MITARBEITENDE</sup></div>
+        <div class="l">Unter einem Dach</div>
+        <div class="h">Meister, Gesellen und vier Auszubildende aktuell.</div>
+      </div>
+      <div class="tstat">
+        <div class="k">2.400<sup>+</sup></div>
+        <div class="l">Anlagen installiert</div>
+        <div class="h">Von der Miet­wohnung bis zum Gewerbe­objekt.</div>
+      </div>
+      <div class="tstat">
+        <div class="k">98<sup>%</sup></div>
+        <div class="l">Weiter­empfehlung</div>
+        <div class="h">Auf Basis unserer jährlichen Kundenumfragen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUSSTELLUNG / SHOWROOM -->
+<section class="showroom">
+  <div class="showroom-inner">
+    <div>
+      <div class="seclabel">Besuchen Sie uns</div>
+      <h2 class="sec-title" style="margin-top: 16px;">Heiztechnik <em>zum Anfassen.</em></h2>
+      <p class="sec-lede" style="margin-top: 24px;">
+        In unserer Ausstellung erleben Sie Wärme­pumpen, Pelletkessel, PV-Module und Bad­lösungen live. Kein Prospekt, keine Animation &mdash; echtes Material, echte Maße.
+      </p>
+      <div class="showroom-addr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="a">
+          <b>Bohse Haustechnik · 250 m² Schauraum</b>
+          Wacholderweg 26 · 49733 Haren-Emmeln
+        </div>
+      </div>
+    </div>
+    <div class="showroom-img fade-up">
+      <img src="images/ausstellung.jpg" alt="Ausstellung mit Wärmepumpe und Speichern" />
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-grid">
+    <div class="final-left">
+      <div class="final-eyebrow">Ihr nächster Schritt</div>
+      <h2 class="final-headline">Sprechen wir über <em>Ihre Energie.</em></h2>
+      <p class="final-sub">
+        Ob Wärmepumpe, PV-Anlage oder neues Bad — der schnellste Weg ist ein kurzes Gespräch. Wir hören zu, klären offene Fragen und vereinbaren einen Termin im 250 m² Schauraum oder bei Ihnen zu Hause.
+      </p>
+
+      <div class="final-actions">
+        <a href="tel:+4959324660" class="final-action-card primary">
+          <div class="final-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="final-action-text">
+            <div class="lbl">Direkt anrufen</div>
+            <div class="val">05932 · 46 60</div>
+          </div>
+          <div class="final-action-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="Kontakt.html" class="final-action-card">
+          <div class="final-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="final-action-text">
+            <div class="lbl">Beratung anfragen</div>
+            <div class="val">Termin vereinbaren</div>
+          </div>
+          <div class="final-action-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="mailto:info@bohse-haustechnik.de" class="final-action-card">
+          <div class="final-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </div>
+          <div class="final-action-text">
+            <div class="lbl">E-Mail schreiben</div>
+            <div class="val">info@bohse-haustechnik.de</div>
+          </div>
+          <div class="final-action-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="final-right">
+      <div class="final-info">
+        <div class="final-info-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="lbl">Schauraum & Werkstatt</div>
+            <div class="val"><b>Wacholderweg 26</b> · 49733 Haren-Emmeln</div>
+          </div>
+        </div>
+        <div class="final-info-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="lbl">Erreichbarkeit</div>
+            <div class="val"><b>Mo–Do</b> 07:30–16:45 · <b>Fr</b> 07:30–13:45</div>
+          </div>
+        </div>
+        <div class="final-info-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/></svg>
+          </div>
+          <div>
+            <div class="lbl">Notdienst bis 20:00</div>
+            <div class="val"><b>05932 · 90 39 896</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="final-trust-strip">
+    <div class="final-trust-inner">
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg> Wolf Platinum-Partner</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg> Innung SHK Meppen-Lingen</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg> 70 Jahre · 3. Generation</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7L2 9l7-1 3-6z"/></svg> 4,8 / 5 auf Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo-white.png" alt="Bohse" class="foot-logo" />
+        <p>Familienbetrieb in dritter Generation. Heizung, Sanitär und regenerative Energien aus einer Hand — seit 1955.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/bohse_haustechnik/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/bohsehaustechnik/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.55l.38-2.95H13.5V8.67c0-.85.24-1.43 1.46-1.43h1.56V4.6c-.27-.04-1.19-.12-2.27-.12-2.25 0-3.79 1.37-3.79 3.89v2.18H7.9v2.95h2.56V21h3.04z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="Leistungen.html#waermepumpe">Wärmepumpen</a></li>
+          <li><a href="Leistungen.html#pv">Photovoltaik</a></li>
+          <li><a href="Leistungen.html#pellet">Pelletheizung</a></li>
+          <li><a href="Leistungen.html#solar">Solarthermie</a></li>
+          <li><a href="Leistungen.html#sanitaer">Sanitär & Bad</a></li>
+          <li><a href="Leistungen.html#wartung">Wartung</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="Ueber-uns.html">Über uns</a></li>
+          <li><a href="Referenzen.html">Referenzen</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Ausbildung</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Wacholderweg 26</li>
+          <li>49733 Haren-Emmeln</li>
+          <li><a href="tel:+4959324660">05932 · 46 60</a></li>
+          <li><a href="mailto:info@bohse-haustechnik.de">info@bohse-haustechnik.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BOHSE GMBH · HRB 12345</span>
+      <span>IMPRESSUM · DATENSCHUTZ · AGB</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a href="https://wa.me/4959324660" target="_blank" rel="noopener" class="sticky-call" aria-label="Jetzt per WhatsApp schreiben">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  Jetzt WhatsApp schreiben
+</a>
+
+<script>
+// fade-up
+(function () {
+  const els = document.querySelectorAll('.fade-up');
+  if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 30);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+})();
+
+// dev-only: ?m=1 forces mobile layout at 390px
+(function () {
+  if (!/[?&]m=1/.test(location.search)) return;
+  const out = [];
+  for (const sheet of document.styleSheets) {
+    try {
+      for (const rule of sheet.cssRules) {
+        if (rule.type === CSSRule.MEDIA_RULE) {
+          const mm = rule.media.mediaText.match(/max-width:\s*(\d+)px/);
+          if (mm && +mm[1] >= 600) {
+            for (const inner of rule.cssRules) out.push(inner.cssText);
+          }
+        }
+      }
+    } catch(e){}
+  }
+  const s = document.createElement('style');
+  s.textContent = out.join('\n');
+  document.head.appendChild(s);
+  document.documentElement.style.width = '390px';
+  document.documentElement.style.overflowX = 'hidden';
+  document.body.style.overflowX = 'hidden';
+})();
+</script>
+
+</body>
+</html>

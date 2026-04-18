@@ -1,0 +1,307 @@
+/* ============================================================
+   BOHSE — Design Tokens
+   Energy-tech, editorial-serif, data-driven
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --bh-yellow:        oklch(85% 0.17 90);      /* refined yellow, warmer */
+  --bh-yellow-deep:   oklch(75% 0.18 80);      /* hover / pressed */
+  --bh-yellow-soft:   oklch(96% 0.06 95);      /* background tint */
+
+  /* Neutrals — warm anthracite family */
+  --ink-900:          oklch(18% 0.01 270);
+  --ink-800:          oklch(24% 0.01 270);
+  --ink-700:          oklch(34% 0.008 270);
+  --ink-600:          oklch(48% 0.006 270);
+  --ink-500:          oklch(62% 0.004 270);
+  --ink-400:          oklch(74% 0.003 270);
+  --ink-300:          oklch(86% 0.003 270);
+  --ink-200:          oklch(92% 0.003 270);
+  --ink-100:          oklch(96% 0.003 270);
+  --ink-050:          oklch(98% 0.003 80);     /* offwhite w/ warm hint */
+  --ink-000:          oklch(99.5% 0.002 80);
+
+  /* Semantic */
+  --bg:               var(--ink-050);
+  --surface:          #ffffff;
+  --surface-alt:      var(--ink-100);
+  --surface-dark:     var(--ink-900);
+  --text:             var(--ink-900);
+  --text-muted:       var(--ink-600);
+  --text-faint:       var(--ink-500);
+  --border:           var(--ink-200);
+  --border-strong:    var(--ink-300);
+  --accent:           var(--bh-yellow);
+  --accent-ink:       var(--ink-900);
+
+  /* Typography */
+  --font-serif:       "Newsreader", "Source Serif 4", Georgia, serif;
+  --font-sans:        "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:        "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale — compact default, generous available via tweak */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --maxw: 1280px;
+  --maxw-text: 680px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur: 360ms;
+  --dur-slow: 720ms;
+}
+
+/* Density variants */
+.density-roomy {
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+  --space-10: 160px;
+}
+
+/* Typo variants */
+.typo-editorial { --font-serif: "Newsreader", Georgia, serif; }
+.typo-instrument { --font-serif: "Instrument Serif", Georgia, serif; }
+.typo-grotesk-mono { --font-serif: "Inter", sans-serif; --font-sans: "Inter", sans-serif; }
+
+/* Motion off */
+.motion-off *,
+.motion-off *::before,
+.motion-off *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font: inherit; cursor: pointer; }
+
+::selection { background: var(--bh-yellow); color: var(--ink-900); }
+
+/* ============================================================
+   Type
+   ============================================================ */
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-size: clamp(48px, 7vw, 112px);
+}
+
+.display-sm {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+
+.h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-size: clamp(28px, 3vw, 44px);
+}
+
+.h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-size: 22px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
+
+.lede {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: var(--space-9) 0; }
+.section-sm { padding: var(--space-8) 0; }
+
+.hairline { border-top: 1px solid var(--border); }
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all var(--dur-fast) var(--ease);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--bh-yellow);
+  color: var(--ink-900);
+  border-color: var(--bh-yellow);
+}
+.btn-primary:hover { background: var(--bh-yellow-deep); border-color: var(--bh-yellow-deep); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-900);
+  border-color: var(--border-strong);
+}
+.btn-ghost:hover { border-color: var(--ink-900); }
+
+.btn-dark {
+  background: var(--ink-900);
+  color: var(--ink-050);
+}
+.btn-dark:hover { background: var(--ink-800); }
+
+.btn svg { width: 14px; height: 14px; }
+
+/* ============================================================
+   Chips / tags
+   ============================================================ */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.chip-dot::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--bh-yellow);
+}
+
+/* ============================================================
+   Motion primitives
+   ============================================================ */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.fade-up.in { opacity: 1; transform: none; }
+
+/* Reveal on load */
+@keyframes kfFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+.anim-in { animation: kfFadeIn var(--dur) var(--ease-out) both; }
+
+/* ============================================================
+   Utility
+   ============================================================ */
+
+.grid { display: grid; gap: var(--space-5); }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 8px; } .gap-3 { gap: 12px; } .gap-4 { gap: 16px; } .gap-6 { gap: 24px; }
+.muted { color: var(--text-muted); }
+.faint { color: var(--text-faint); }
+.ta-center { text-align: center; }
+
+/* placeholder image (striped) */
+.ph {
+  background:
+    repeating-linear-gradient(135deg,
+      var(--ink-200) 0 8px,
+      var(--ink-100) 8px 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-600);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ph-dark {
+  background:
+    repeating-linear-gradient(135deg,
+      var(--ink-800) 0 8px,
+      var(--ink-900) 8px 16px);
+  color: var(--ink-300);
+}
