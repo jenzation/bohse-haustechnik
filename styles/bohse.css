@@ -81,13 +81,11 @@ button { font: inherit; cursor: pointer; }
 .topbar a { color: var(--ink-200); text-decoration: none; transition: color 160ms; }
 .topbar a:hover { color: var(--bh-yellow); }
 .topbar .pill { display: inline-flex; align-items: center; gap: 10px; color: var(--ink-300); }
-.topbar .pill-hours { display: inline-flex; flex-direction: column; line-height: 1.25; gap: 1px; font-size: 12px; }
-.topbar .pill-hours .pill-sep { display: none; }
-/* tablet: kollabiere pill-hours zu einer Zeile damit topbar bei ~900-980 nicht überlappt */
-@media (max-width: 1100px) {
-  .topbar .pill-hours { flex-direction: row; gap: 8px; align-items: center; }
-  .topbar .pill-hours .pill-sep { display: inline; color: var(--ink-400); }
-}
+.topbar .pill-status { color: var(--ink-200); font-weight: 500; }
+.topbar .pill-hours { display: inline-flex; flex-direction: row; align-items: center; gap: 8px; line-height: 1.25; font-size: 12px; }
+.topbar .pill-hours .pill-sep { display: inline; color: var(--ink-400); }
+.topbar .pill.closed .dot { background: oklch(70% 0.17 30); box-shadow: 0 0 0 3px oklch(70% 0.17 30 / 0.2); }
+.topbar .pill.closed .pill-status { color: oklch(78% 0.12 30); }
 /* knapp über mobile-breakpoint: noch kompakter */
 @media (max-width: 980px) {
   .topbar { font-size: 11px; }
@@ -828,13 +826,13 @@ body.nav-open .mobile-menu { display: block; }
     --h3-size: 20px;
     --lede-size: 16px;
     --body-size: 15px;
-    --pad-section: 56px;
+    --pad-section: 48px;
     --pad-x: 20px;
   }
   body { font-size: 15px; }
-  .sec-head { margin-bottom: 36px !important; }
+  .sec-head { margin-bottom: 26px !important; }
   .sec-head .sec-title { margin-top: 10px; }
-  .sec-head .sec-lede { margin-top: 16px; }
+  .sec-head .sec-lede { margin-top: 14px; }
 
   /* ---------- WRAPPER PADDING (unified) ---------- */
   .wrap, .topbar-inner, .nav-inner, .hero-grid,
@@ -849,16 +847,34 @@ body.nav-open .mobile-menu { display: block; }
   .topbar { display: none; }
 
   /* ---------- NAV ---------- */
+  /* flex layout ensures burger sits flush right even when nav-links is hidden */
   .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); }
-  .nav-inner { padding: 10px var(--pad-x); gap: 10px; grid-template-columns: auto 1fr auto; }
+  .nav-inner {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--pad-x);
+    gap: 10px;
+  }
   .nav-logo .logo-img, .logo-img { height: 30px; }
   .nav-cta-btn { display: none; }
-  .nav-cta { gap: 8px; }
+  .nav-cta { gap: 8px; margin-left: auto; }
+  .nav-burger { margin-left: auto; }
 
   /* ---------- HERO ---------- */
   .hero { padding: 24px 0 0; }
   .hero-grid { gap: 28px; }
-  .hero-copy .trust-row { gap: 10px 12px; margin-bottom: 20px; }
+  .hero-copy .trust-row {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "pill pill" "stars text";
+    gap: 10px 12px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .hero-copy .trust-row .trust-pill { grid-area: pill; justify-self: start; }
+  .hero-copy .trust-row .trust-stars { grid-area: stars; }
+  .hero-copy .trust-row .trust-text { grid-area: text; }
   .trust-pill { padding: 5px 10px; font-size: 11px; }
   .trust-text { font-size: 12px; line-height: 1.4; }
   .hero-h1 { line-height: 1.05; letter-spacing: -0.03em; margin: 4px 0 24px; max-width: none; padding-bottom: 8px; }
@@ -892,17 +908,28 @@ body.nav-open .mobile-menu { display: block; }
   .hero-chip-gf .r { font-size: 9px; margin-top: 2px; }
 
   /* ---------- TRUSTBAR (partner-logos row under hero) ---------- */
-  .trustbar { margin-top: 48px; padding: 24px 0 !important; }
-  .trustbar-inner { gap: 16px !important; }
-  .trustbar-lbl { font-size: 10px !important; }
-  .trustbar-row { gap: 24px !important; flex-wrap: wrap; justify-content: flex-start; }
-  .trustbar-row .plogo { height: 22px !important; }
+  .trustbar { margin-top: 32px; padding: 20px 0 !important; }
+  .trustbar-inner {
+    gap: 14px !important;
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  .trustbar-lbl { font-size: 10px !important; justify-self: center; }
+  .trustbar-row {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px !important;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  .trustbar-row .plogo { height: 20px !important; max-width: 100%; opacity: 0.8; filter: grayscale(1); }
 
   /* ---------- SECTIONS ---------- */
   .section { padding: var(--pad-section) 0 !important; }
-  .section-tight { padding: 56px 0 !important; }
+  .section-tight { padding: 44px 0 !important; }
   .sec-title, .hero-h1 { max-width: none; }
-  .seclabel { font-size: 10px !important; margin-bottom: 14px; }
+  .seclabel { font-size: 10px !important; margin-bottom: 12px; }
 
   /* section "intro + blurb" inline grids */
   section.section > div > div[style*="grid-template-columns: 1fr 1fr"] {
@@ -912,13 +939,15 @@ body.nav-open .mobile-menu { display: block; }
   section.section > div[style*="max-width"] { padding: 0 var(--pad-x) !important; margin-bottom: 36px !important; }
 
   /* ---------- WHY / cards ---------- */
+  .why-inner { gap: 24px !important; }
   .why-cards { grid-template-columns: 1fr !important; gap: 12px !important; }
   .wcard { padding: 22px !important; }
   .wcard .n { margin-bottom: 16px !important; }
   .wcard h3 { font-size: 22px !important; }
 
   /* ---------- OFFER BAND ---------- */
-  .offer-band { padding: 56px 0 !important; }
+  .offer-band { padding: 48px 0 !important; }
+  .offer-inner { gap: 28px !important; }
   .offer-inner h2, .final-hero, .team-inner h2 {
     font-size: clamp(28px, 8vw, 38px) !important;
     max-width: none;
@@ -998,14 +1027,43 @@ body.nav-open .mobile-menu { display: block; }
   .testi-score .big { font-size: 36px; }
 
   /* ---------- TEAM ---------- */
-  .team { padding: 56px 0 !important; }
-  .team-inner { gap: 32px !important; }
-  .tstat { padding: 18px 0; }
-  .tstat .k { font-size: 40px !important; }
-  .tstat .l { font-size: 12px !important; }
+  .team { padding: 48px 0 !important; }
+  .team-inner { gap: 24px !important; }
+  .team-grid { gap: 20px !important; }
+  .team-stats {
+    margin-top: 32px !important;
+    padding-top: 28px !important;
+    gap: 0 !important;
+  }
+  .tstat {
+    padding: 18px 0 !important;
+    text-align: left !important;
+    border-bottom: 1px solid oklch(55% 0.01 260 / 0.25) !important;
+    border-right: none !important;
+  }
+  .tstat:first-child { padding-top: 0 !important; }
+  .tstat:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .tstat .k {
+    font-size: 44px !important;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tstat .k sup {
+    font-size: 11px !important;
+    letter-spacing: 0.14em;
+    vertical-align: baseline;
+    margin-left: 0 !important;
+    font-weight: 500;
+    top: auto;
+  }
+  .tstat .l { margin-top: 10px !important; font-size: 11px !important; }
+  .tstat .h { margin-top: 6px !important; font-size: 13px !important; max-width: none; }
 
   /* ---------- SHOWROOM ---------- */
-  .showroom { padding: 56px 0 !important; }
+  .showroom { padding: 48px 0 !important; }
   .showroom-inner { gap: 24px !important; }
   .showroom-media { aspect-ratio: 4/3; }
 
@@ -1049,10 +1107,36 @@ body.nav-open .mobile-menu { display: block; }
   .final-trust-inner { gap: 14px 20px !important; justify-content: flex-start !important; font-size: 9.5px !important; }
 
   /* ---------- FOOTER ---------- */
-  .footer { padding: 56px 0 24px; }
-  .footer-top { grid-template-columns: 1fr !important; padding-bottom: 36px !important; gap: 32px !important; }
-  .footer-col h4 { margin-bottom: 14px; }
-  .footer-bottom { flex-direction: column; gap: 10px; align-items: flex-start !important; text-align: left !important; padding-top: 20px !important; }
+  .footer { padding: 44px 0 20px; }
+  .footer-top {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-areas:
+      "brand brand"
+      "leistungen unternehmen"
+      "kontakt kontakt" !important;
+    padding-bottom: 24px !important;
+    gap: 24px 20px !important;
+  }
+  .footer-top > :nth-child(1) { grid-area: brand; }
+  .footer-top > :nth-child(2) { grid-area: leistungen; }
+  .footer-top > :nth-child(3) { grid-area: unternehmen; }
+  .footer-top > :nth-child(4) { grid-area: kontakt; }
+  .footer-brand .foot-logo { height: 40px; }
+  .footer-brand p { margin-top: 12px; font-size: 13px; max-width: none; line-height: 1.5; }
+  .footer-social { margin-top: 12px; gap: 8px; }
+  .footer-social a { width: 32px; height: 32px; }
+  .footer-col h4 { margin-bottom: 10px; font-size: 10.5px; }
+  .footer-col ul { gap: 6px; }
+  .footer-col li, .footer-col a { font-size: 13px; line-height: 1.45; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding-top: 16px !important;
+    font-size: 10px;
+  }
 
   /* ---------- STICKY CTA ---------- */
   .sticky-call {
