@@ -56,7 +56,7 @@
 <!-- NAV -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="Startseite.html" aria-label="Bohse Startseite">
+    <a href="Startseite.html" aria-label="Bohse Startseite" class="nav-logo">
       <img src="images/logo-black.png" alt="BOHSE — Heizung Sanitär Regenerative Energien" class="logo-img" />
     </a>
     <nav class="nav-links">
@@ -71,9 +71,37 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
         05932 · 46 60
       </a>
-      <a class="btn btn-primary" href="Kontakt.html">
+      <a class="btn btn-primary nav-cta-btn" href="Kontakt.html">
         Beratung anfragen
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="Startseite.html" class="active">Start</a>
+      <a href="Leistungen.html">Leistungen</a>
+      <a href="Ueber-uns.html">Über uns</a>
+      <a href="Referenzen.html">Referenzen</a>
+      <a href="Kontakt.html">Kontakt</a>
+    </nav>
+    <div class="mobile-menu-cta">
+      <a href="tel:+4959324660" class="mobile-menu-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <div class="lbl">Anrufen</div>
+          <div class="val">05932 · 46 60</div>
+        </div>
+      </a>
+      <a href="tel:+4959329039896" class="mobile-menu-phone emerg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <div class="lbl">Notdienst</div>
+          <div class="val">05932 · 90 39 896</div>
+        </div>
       </a>
     </div>
   </div>
@@ -720,6 +748,22 @@
 </a>
 
 <script>
+// mobile menu toggle
+(function () {
+  const btn = document.querySelector('.nav-burger');
+  const menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  const setOpen = (open) => {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.classList.toggle('nav-open', open);
+  };
+  btn.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  window.addEventListener('resize', () => { if (window.innerWidth > 980) setOpen(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+})();
+
 // fade-up
 (function () {
   const els = document.querySelectorAll('.fade-up');
